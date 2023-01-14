@@ -9,7 +9,7 @@
       ul {
         list-style: none;
         color: blue;
-        font-size: 50px;
+        font-size: 30px;
         text-decoration: underline;
       }
     </style>
@@ -18,16 +18,15 @@
     <ul id="target"></ul>
     <script>
       var user = [
-        { id: 1, name: "Hong Anh", gender: 2 },
-        { id: 2, name: "Tuan Anh", gender: 1 },
-        { id: 3, name: "Thanh Binh", gender: 1 },
-        { id: 4, name: "Thuy Trang", gender: 2 },
-        { id: 5, name: "Minh Tuan", gender: 1 },
+        { id: 1, name: "Xuân Văn", gender: 1 },
+        { id: 2, name: "Thu Hằng", gender: 2 },
+        { id: 3, name: "Hùng Ngô", gender: 1 },
+        { id: 4, name: "Tạ Huyền", gender: 2 },
+        { id: 5, name: "Thanh Bình", gender: 1 },
       ];
       var target = document.querySelector("#target");
       user.map(function (item) {
         var li = document.createElement("li");
-        li.setAttribute("class", "user-items");
         li.innerText = `
             ${item.id} - ${item.name} - ${item.gender == 1 ? "male" : "female"}
         `;

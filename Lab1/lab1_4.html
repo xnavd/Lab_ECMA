@@ -7,13 +7,9 @@
     <title>bai 4</title>
     <style>
         .user_item{
-            color: green;text-decoration: underline;cursor: pointer;
+            color: red;text-decoration: underline;cursor: pointer;
         }
-        button{
-            width: 100px;
-            height: 30px;
-            color: black;
-        }
+
     </style>
 </head>
 <body>
@@ -53,6 +49,7 @@
             tagLI.innerText = `${item.id} - ${item.name} - ${item.gender === 1 ? "male" : "female"}`;
             target.appendChild(tagLI);
         });
+        
         var id = document.getElementById("addUserID");
         var name1 = document.getElementById("addUserName");
         var gender = document.getElementById("addUserGender");

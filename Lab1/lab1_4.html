@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 4</title>
+    <style>
+        .user_item{
+            color: green;text-decoration: underline;cursor: pointer;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <p>  
+            <label for="">ID</label>
+            <input type="number" id="addUserID" value="">
+        </p>
+        <p>  
+            <label for="">Name</label>
+            <input type="text" id="addUserName" value="">
+        </p>
+        <p>  
+            <label for="">Gerder</label>
+            <select name="" id="addUserGender">
+                <option value="1">male</option>
+                <option value="2">female</option>
+            </select>
+        </p>
+        <p>
+            <button type="button" id="addAction">add</button>
+        </p>
+    </form>
+    <ul id="target"></ul>
+    <script>
+        var users = [
+            {id : 1, name: "hai nam", gender: 1},
+            {id : 2, name: "hong ha", gender: 2},
+            {id : 3, name: "ngoc anh", gender: 1},
+            {id : 4, name: "hai ha", gender: 2},
+            {id : 5, name: "quach tinh", gender: 1}
+        ];
+        var target = document.querySelector("#target");
+        users.forEach(function(item){
+            var tagLI = document.createElement("li");
+            tagLI.setAttribute("class" , "user_item");
+            tagLI.innerText = `${item.id} - ${item.name} - ${item.gender === 1 ? "male" : "female"}`;
+            target.appendChild(tagLI);
+        });
+        var id = document.getElementById("addUserID");
+        var name1 = document.getElementById("addUserName");
+        var gender = document.getElementById("addUserGender");
+        var btnAction = document.getElementById("addAction");
+        btnAction.addEventListener("click",function(){
+            var tagLIafter = document.createElement("li");
+            tagLIafter.setAttribute("class","user_item");
+            tagLIafter.innerText = `${id.value} - ${name1.value} - ${gender.value === 1 ? "male" : "female"} `;
+            target.appendChild(tagLIafter);
+        });
+    </script>
+</body>
+</html>

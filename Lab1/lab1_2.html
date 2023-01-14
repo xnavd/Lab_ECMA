@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #color {
+        display: block;
+        height: 30px;
+        width: 200px;
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="color">
+      <input type="text" id="txtInput" value="33691E" />
+      <h3 id="color">Input Text</h3>
+    </div>
+    <script>
+      var h3Text = document.querySelector("h3");
+      var txtInput = document.querySelector("#txtInput");
+      txtInput.onkeyup = function(){
+        h3Text.innerText = txtInput.value;
+      }
+    </script>
+  </body>
+</html>
